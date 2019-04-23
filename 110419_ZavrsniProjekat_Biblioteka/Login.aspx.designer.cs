@@ -10,7 +10,7 @@
 namespace _110419_ZavrsniProjekat_Biblioteka {
     
     
-    public partial class SignUp {
+    public partial class Login {
         
         /// <summary>
         /// form1 control.
@@ -20,15 +20,6 @@ namespace _110419_ZavrsniProjekat_Biblioteka {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// memId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox memId;
         
         /// <summary>
         /// username control.
@@ -47,23 +38,5 @@ namespace _110419_ZavrsniProjekat_Biblioteka {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox psw;
-        
-        /// <summary>
-        /// psw2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox psw2;
-        
-        /// <summary>
-        /// email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Sign Up" Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="_110419_ZavrsniProjekat_Biblioteka.SignUp" %>
+﻿<%@ Page Title="Login" Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="_110419_ZavrsniProjekat_Biblioteka.Login" %>
 
 <!DOCTYPE html>
 
@@ -38,10 +38,10 @@
             <!-- Right nav menu -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="Login.aspx">Login</a>
+                    <a class="nav-link active" href="Login.aspx">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="SignUp.aspx">Sign Up</a>
+                    <a class="nav-link" href="SignUp.aspx">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -51,17 +51,13 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-4"><%: Title %></h1>
-            <p>Create new account</p>
+            <p>Log in to your account</p>
         </div>
     </div>
 
-    <!-- Sign Up Form -->
+    <!-- Login Form -->
     <div class="container">
-        <form id="form1" runat="server">
-            <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="memId">Membership Card ID</asp:Label>
-                <asp:TextBox ID="memId" runat="server" CssClass="form-control" placeholder="Enter Membership Card ID"></asp:TextBox>
-            </div>
+        <form id="form1" runat="server">            
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="username">Username</asp:Label>
                 <asp:TextBox ID="username" runat="server" CssClass="form-control" placeholder="Enter Username"></asp:TextBox>
@@ -69,17 +65,9 @@
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="psw">Password</asp:Label>
                 <asp:TextBox ID="psw" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
-            </div>
+            </div>            
             <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="psw2">Confirm Password</asp:Label>
-                <asp:TextBox ID="psw2" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="email">Email</asp:Label>
-                <asp:TextBox ID="email" runat="server" CssClass="form-control" TextMode="Email" placeholder="Enter Email"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Button runat="server" CssClass="btn btn-primary" Text="Sign Up" />
+                <asp:Button runat="server" CssClass="btn btn-primary" Text="Login" />
             </div>
         </form>
     </div>

@@ -21,7 +21,7 @@
 	<!-- <form id="form1" runat="server"> -->
 	<!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+        <a class="navbar-brand" href="Default.aspx">Logo</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +41,7 @@
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">Login</a>
+                    <a class="nav-link" href="Login.aspx">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="SignUp.aspx">Sign Up</a>
