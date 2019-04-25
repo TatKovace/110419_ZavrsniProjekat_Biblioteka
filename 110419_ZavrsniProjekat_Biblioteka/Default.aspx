@@ -20,7 +20,7 @@
 <body>
 	<!-- <form id="form1" runat="server"> -->
 	<!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">        
         <a class="navbar-brand" href="Default.aspx">Logo</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
             <span class="navbar-toggler-icon"></span>
