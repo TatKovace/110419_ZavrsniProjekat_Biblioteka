@@ -124,6 +124,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

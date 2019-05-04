@@ -13,5 +13,17 @@ namespace _110419_ZavrsniProjekat_Biblioteka
         {
 
         }
+
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+            if(IsValid)
+            {
+                Message.Text = "It is valid.";
+            }
+            else
+            {
+                Message.Text = "Login attempt failed.";
+            }
+        }
     }
 }

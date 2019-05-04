@@ -191,3 +191,52 @@ insert into bookGenre(book_id, genre_id) values
 (1, 8),
 (2, 2),
 (2, 4);
+
+PRINT N'Altering table memberOnline, adding column m_date...'
+ALTER TABLE memberOnline ADD m_date date;
+-- Last login date
+
+PRINT N'Altering table memberOnline, adding column m_time...'
+ALTER TABLE memberOnline ADD m_time time(0);
+-- Last login time
+
+PRINT N'Altering table member, adding unique m_cnum...'
+ALTER TABLE member ADD CONSTRAINT member_uq1 UNIQUE (m_cnum);
+-- Unique Membership card No
+-- ALTER TABLE member DROP CONSTRAINT member_uq1; 
+
+PRINT N'Initial values for Library.bookGenre...';
+
+insert into member (m_cnum, m_fname, m_lname, m_snum, m_address, m_city, m_tel, m_datemem) values 
+(100001, 'Donald', 'Duck', '1234567890123', '123 Rosewood Lane', 'New York', '055/1111-222', '2010-02-15'),
+(100002, 'Mickey', 'Mouse', '1234567890124', '47 Newbridge Dr.', 'New York', '055/1111-233', '2015-06-27');
+
+-- SELECT * FROM member
+-- SELECT * FROM memberOnline
+
+PRINT N'Creating Stored Procedure InsertMemberOnline...';
+GO
+CREATE PROCEDURE InsertMemberOnline
+(
+@Member_cnum bigint,
+@M_username nvarchar(250),
+@M_password nvarchar(250),
+@M_email nvarchar(250)
+)
+AS
+INSERT INTO memberOnline (member_id, m_username, m_password, m_email, person_id, m_date, m_time) VALUES
+((SELECT id FROM member WHERE m_cnum = @Member_cnum), @M_username, @M_password, @M_email, DEFAULT, GETDATE(), GETDATE());
+GO
+-- drop procedure InsertMemberOnline;
+-- EXECUTE InsertMemberOnline 100002, 'drugi', 'druga', 'tralala@gmail.com'
+
+PRINT N'Creating Stored Procedure UpdateMemberOnline...';
+GO
+CREATE PROCEDURE UpdateMemberOnline
+( @M_username nvarchar(250) )
+AS
+UPDATE memberOnline SET m_date=GETDATE(), m_time=GETDATE()
+WHERE m_username=@M_username;
+GO
+-- DROP PROCEDURE UpdateMemberOnline
+-- EXECUTE UpdateMemberOnline drugi

@@ -51,35 +51,47 @@
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-4"><%: Title %></h1>
-            <p>Create new account</p>
+            <p><asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder></p>            
         </div>
     </div>
 
     <!-- Sign Up Form -->
     <div class="container">
-        <form id="form1" runat="server">
+        <form id="form1" runat="server" class="width400">
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="memId">Membership Card ID</asp:Label>
-                <asp:TextBox ID="memId" runat="server" CssClass="form-control" placeholder="Enter Membership Card ID"></asp:TextBox>
+                <asp:TextBox ID="memId" runat="server" CssClass="form-control" placeholder="Enter Membership Card ID" TextMode="Number"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="memId" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="Membership Card number is required." />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="username">Username</asp:Label>
                 <asp:TextBox ID="username" runat="server" CssClass="form-control" placeholder="Enter Username"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="username" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="Username field is required." />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="psw">Password</asp:Label>
                 <asp:TextBox ID="psw" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="psw" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="Password field is required." />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="psw2">Confirm Password</asp:Label>
                 <asp:TextBox ID="psw2" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="psw2" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="Confirm password field is required." />
+                <asp:CompareValidator runat="server" ControlToCompare="psw" ControlToValidate="psw2" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="email">Email</asp:Label>
                 <asp:TextBox ID="email" runat="server" CssClass="form-control" TextMode="Email" placeholder="Enter Email"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="email" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="Email field is required." />
             </div>
             <div class="form-group">
-                <asp:Button runat="server" CssClass="btn btn-primary" Text="Sign Up" />
+                <asp:Button ID="btnSignUp" runat="server" CssClass="btn btn-primary" Text="Sign Up" OnClick="btnSignUp_Click" />
             </div>
         </form>
     </div>
@@ -95,5 +107,25 @@
 	<script src="Scripts/popper.min.js"></script>
 	<script src="Scripts/bootstrap.min.js"></script>
     <!-- Response.Write(DateTime.Now.Year.ToString()); -->
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $(document)[0].oncontextmenu = function () { return false; }
+
+            $(document).mousedown(function (e) {
+                if (e.button == 2) {
+                    alert('Sorry, this functionality is disabled!');
+                    return false;
+                } else {
+                    return true;
+                }
+
+            });
+        });
+    
+    </script>
+
 </body>
 </html>

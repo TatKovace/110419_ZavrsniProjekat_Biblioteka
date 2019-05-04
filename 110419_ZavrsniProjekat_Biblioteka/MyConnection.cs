@@ -9,7 +9,7 @@ namespace _110419_ZavrsniProjekat_Biblioteka
 {
     public class MyConnection
     {
-        static public SqlConnection Connect()
+        public static SqlConnection Connect()
         {
             // Class that provides connection
 

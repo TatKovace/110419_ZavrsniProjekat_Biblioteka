@@ -57,17 +57,24 @@
 
     <!-- Login Form -->
     <div class="container">
-        <form id="form1" runat="server">            
+        <form id="form1" runat="server" class="width400">            
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="username">Username</asp:Label>
                 <asp:TextBox ID="username" runat="server" CssClass="form-control" placeholder="Enter Username"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="username" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="Unername field is required." />
             </div>
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="psw">Password</asp:Label>
                 <asp:TextBox ID="psw" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="psw" CssClass="text-danger font90" 
+                    Display="Dynamic" ErrorMessage="Password field is required." />
             </div>            
             <div class="form-group">
-                <asp:Button runat="server" CssClass="btn btn-primary" Text="Login" />
+                <asp:Button ID="BtnLogin" runat="server" CssClass="btn btn-primary" Text="Login" OnClick="BtnLogin_Click" />
+                <div>
+                    <asp:Label runat="server" ID="Message"></asp:Label>
+                </div>                
             </div>
         </form>
     </div>
