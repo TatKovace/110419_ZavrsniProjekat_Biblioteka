@@ -1,6 +1,6 @@
 # Library Online service
 This is final project for course I'm attending in Comtrade, Belgrade, Serbia.<br /><br />
-The task was to create Web application using ASP.NET project with T-SQL code first, at least one Stored Procedure and at least one View. From web pages side it must have all four Create-Read-Update-Delete functionality.
+The task was to create Web application using ASP.NET project with DataBase first (T-SQL code), at least one Stored Procedure and at least one View. From web pages side it must have all four Create-Read-Update-Delete functionality.
 
 ### This project
 This project started form empty template ASP.NET Web pages.<br />
